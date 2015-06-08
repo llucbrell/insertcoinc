@@ -66,24 +66,24 @@ but this is not a good practice use _method=put with get-->
 <div id="buttons">
 
 
-<a href="#" onclick="newTurn(0)" class="hvr-icon-wobble-vertical reds"></a>
-<a href="#" onclick="newTurn(1)" class="hvr-icon-wobble-vertical reds"></a>
-<a href="#" onclick="newTurn(2)" class="hvr-icon-wobble-vertical reds"></a>
-<a href="#" onclick="newTurn(3)" class="hvr-icon-wobble-vertical reds"></a>
-<a href="#" onclick="newTurn(4)" class="hvr-icon-wobble-vertical reds"></a>
-<a href="#" onclick="newTurn(5)" class="hvr-icon-wobble-vertical reds"></a>
-<a href="#" onclick="newTurn(6)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="insertCoin(0)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="insertCoin(1)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="insertCoin(2)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="insertCoin(3)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="insertCoin(4)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="insertCoin(5)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="insertCoin(6)" class="hvr-icon-wobble-vertical reds"></a>
 </div>
 <div id="buttons2">
 
 
-<a href="#" onclick="newTurn(0)" class="hvr-icon-wobble-vertical yews"></a>
-<a href="#" onclick="newTurn(1)" class="hvr-icon-wobble-vertical yews"></a>
-<a href="#" onclick="newTurn(2)" class="hvr-icon-wobble-vertical yews"></a>
-<a href="#" onclick="newTurn(3)" class="hvr-icon-wobble-vertical yews"></a>
-<a href="#" onclick="newTurn(4)" class="hvr-icon-wobble-vertical yews"></a>
-<a href="#" onclick="newTurn(5)" class="hvr-icon-wobble-vertical yews"></a>
-<a href="#" onclick="newTurn(6)" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="insertCoin(0);" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="insertCoin(1);" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="insertCoin(2);" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="insertCoin(3);" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="insertCoin(4);" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="insertCoin(5);" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="insertCoin(6);" class="hvr-icon-wobble-vertical yews"></a>
 </div>
 
 
@@ -96,12 +96,15 @@ var columns=7;
 var rows=6;
 var maxima= columns*rows;
 var nuevogrid= grid(rows, columns);
-
+var lastArmPos;
+var lastEyePosX;
+var lastEyePosY;
+var lastRArmPos;
   function init(){
   loadGame();
   showControls();
   }
- 
+  
 
 </script>
 </html>
