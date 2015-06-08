@@ -28,11 +28,39 @@
 <script type="text/javascript" src="views.js"></script>
 <link href="./css/hover.css" rel="stylesheet" media="all">
 <link href="./css/mystyle.css" rel="stylesheet" media="all">
+<!-- for style fonts-->
+<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<!-- for style icons-->
 <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 
 
 </head>
 <body onload="init()">
+<header>
+<h1>Insert Coinc</h1>
+<div class="controls">
+
+<p><a href="#" class="newGame" onclick="newGame();">New Game</a></p>
+<p><a href="#" onclick="getBack()" class="undo">Undo Move</a></p>
+</div>
+
+<div id="saveDiv" style="visibility:hidden;">
+<!--
+<form name="gameSave" method="post" action="./model-controller?_method=put"> CHANGE METHOD FOR BETTER EXERCISE CORRECTION Only watch at the URL-direction-bar 
+but this is not a good practice use _method=put with get-->
+<form name="gameSave" method="get" action="./model-controller?_method=put"> 
+  <input type="hidden" name="gameDate" id="gameDate" value="">
+  <input type="hidden" name="counterData" id="counterData" value="">
+  <input type="hidden" name="gameData" id="gameData" value="">
+  <input type="submit" id="saveButton" value="Save Game..">
+	
+</form>
+
+</div>
+
+
+</header>
+
 
 <canvas id="backgroundCanvas" width="800" height="550"></canvas>
 <div id="buttons">
@@ -58,22 +86,8 @@
 <a href="#" onclick="newTurn(6)" class="hvr-icon-wobble-vertical yews"></a>
 </div>
 
-<div id="saveDiv" style="visibility:hidden;">
-<!--
-<form name="gameSave" method="post" action="./model-controller?_method=put"> CHANGE METHOD FOR BETTER EXERCISE CORRECTION Only watch at the URL-direction-bar 
-but this is not a good practice use _method=put with get-->
-<form name="gameSave" method="get" action="./model-controller?_method=put"> 
-  <input type="hidden" name="gameDate" id="gameDate" value="">
-  <input type="hidden" name="counterData" id="counterData" value="">
-  <input type="hidden" name="gameData" id="gameData" value="">
-  <input type="submit" id="savButton" value="Save">
-	
-</form>
 
-</div>
 
-<button class="newGame" onclick="newGame();">New Game</button>
-<a href="#" onclick="getBack()" class="">back</a>
 </body>
 
 <script type="text/javascript">

@@ -1,22 +1,37 @@
 
 
 
+
 body{
 margin: 0px;
 padding: 0px;
 
 }
 
-#newGame{
-	float: right; 
+header{
+	/*padding: 3%;*/
+	text-align: center;
+	padding: 2%;
+	/*padding-right: 3%;*/
+	font-family: 'Pacifico';
+	font-size: 40px;
+	float: right;
+	color: #FFAACC;
 }
+
+.controls{
+	text-align: center; 
+}
+
 a{
     color: #5599FF;
 	margin: -1px;
 }
-a:active{
-	color: #5599FF;
+.newGame:active, .undo:active{
+	color: #FFAACC;
 }
+
+
 /*added for a better User Game Experience*/
 .reds:hover{
 	color: red;
@@ -44,4 +59,16 @@ a:visited{
 }
 #buttons2{
 	margin-left: 190px;
+}
+
+
+
+#saveDiv{
+	text-align: center;
+}
+
+#saveButton{
+	font-size: 20px;
+	font-family: 'Pacifico';
+	color: #FFAACC;
 }
