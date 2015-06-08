@@ -246,3 +246,10 @@ function newGame(){
   counter++;
    }
 
+
+function getBack(){
+  nuevogrid.popOne();
+  changeColor();
+  counter--;
+
+}

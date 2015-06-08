@@ -30,10 +30,12 @@
 var _numberRows= gridRowNumber;
 var _numberColumns= gridColumnNumber;
 var _grid= newGrid(_numberRows, _numberColumns);
+var _historyStack=[];
 
 return{
    getGrid: function(){ return _grid;}   
 ,  setCoin: function (coin, columnNumber){ setCoin(coin, columnNumber);}
+,  popOne: function(){ popOne();}
 };
 
 
@@ -62,9 +64,22 @@ function newGrid(_numberRows, _numberColumns){
 */
 
   function setCoin(coin, columns){
-  
+    _historyStack.push(columns);
   	_grid[columns].push(coin);
 
   }
+
+
+
+function popOne(){
+  var _last= _historyStack.pop();
+ console.log(_last);
+  _grid[_last].pop();
+
+}
+
+
+
+
 }
 
