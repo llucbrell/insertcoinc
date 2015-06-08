@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<!--
+/******************************************************
+         
+
+                    INSERT COINC         
+              
+                  
+               JavaScript Connect4 Game 
+            
+
+******************************************************/
+/**
+* insert coinc
+* @file 'insertcoinc.html' HTML for rendering the game
+* @author llucbrell/Lucas_C/hobbescode@gmail.com
+* @license MIT -llucbrell 2015-
+*/
+-->
+
+
+<head>
+	<title>Insert Coinc</title>
+<script type="text/javascript" src="grid.js"></script>
+<script type="text/javascript" src="engine.js"></script>
+<script type="text/javascript" src="views.js"></script>
+<link href="./css/hover.css" rel="stylesheet" media="all">
+<link href="./css/mystyle.css" rel="stylesheet" media="all">
+<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
+
+
+</head>
+<body onload="init()">
+
+<canvas id="backgroundCanvas" width="800" height="550"></canvas>
+<div id="buttons">
+
+
+<a href="#" onclick="newTurn(0)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="newTurn(1)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="newTurn(2)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="newTurn(3)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="newTurn(4)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="newTurn(5)" class="hvr-icon-wobble-vertical reds"></a>
+<a href="#" onclick="newTurn(6)" class="hvr-icon-wobble-vertical reds"></a>
+</div>
+<div id="buttons2">
+
+
+<a href="#" onclick="newTurn(0)" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="newTurn(1)" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="newTurn(2)" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="newTurn(3)" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="newTurn(4)" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="newTurn(5)" class="hvr-icon-wobble-vertical yews"></a>
+<a href="#" onclick="newTurn(6)" class="hvr-icon-wobble-vertical yews"></a>
+</div>
+
+<button clas="newGame" onclick="newGame();">New Game</button>
+</body>
+
+<script type="text/javascript">
+var counter=0;
+var columns=7;
+var rows=6;
+var maxima= columns*rows;
+var nuevogrid= grid(rows, columns);
+
+  function init(){
+  loadGame();
+  showControls();
+  }
+ 
+
+</script>
+</html>

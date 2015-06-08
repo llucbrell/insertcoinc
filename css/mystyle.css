@@ -1,0 +1,47 @@
+
+
+
+body{
+margin: 0px;
+padding: 0px;
+
+}
+
+#newGame{
+	float: right; 
+}
+a{
+    color: #5599FF;
+	margin: -1px;
+}
+a:active{
+	color: #5599FF;
+}
+/*added for a better User Game Experience*/
+.reds:hover{
+	color: red;
+	
+}
+.yews:hover{
+	color: yellow;
+	
+}
+a:visited{
+	color: #5599FF;
+}
+
+#backgroundCanvas{
+ 
+ position:center; 
+  top:0; 
+  left:0; 
+  height:100%;
+  z-index: -1;
+}
+
+#buttons{
+	margin-left: 190px;
+}
+#buttons2{
+	margin-left: 190px;
+}
