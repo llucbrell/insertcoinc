@@ -58,7 +58,21 @@
 <a href="#" onclick="newTurn(6)" class="hvr-icon-wobble-vertical yews"></a>
 </div>
 
-<button clas="newGame" onclick="newGame();">New Game</button>
+<div id="saveDiv" style="visibility:hidden;">
+<!--
+<form name="gameSave" method="post" action="./model-controller?_method=put"> CHANGE METHOD FOR BETTER EXERCISE CORRECTION Only watch at the URL-direction-bar 
+but this is not a good practice use _method=put with get-->
+<form name="gameSave" method="get" action="./model-controller?_method=put"> 
+  <input type="hidden" name="gameDate" id="gameDate" value="">
+  <input type="hidden" name="counterData" id="counterData" value="">
+  <input type="hidden" name="gameData" id="gameData" value="">
+  <input type="submit" id="savButton" value="Save">
+	
+</form>
+
+</div>
+
+<button class="newGame" onclick="newGame();">New Game</button>
 <a href="#" onclick="getBack()" class="">back</a>
 </body>
 

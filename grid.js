@@ -36,6 +36,7 @@ return{
    getGrid: function(){ return _grid;}   
 ,  setCoin: function (coin, columnNumber){ setCoin(coin, columnNumber);}
 ,  popOne: function(){ popOne();}
+,  getHistory: function(){return _historyStack;}
 };
 
 

@@ -201,7 +201,8 @@ function endGame(colorWinner){
   console.log('Congratulations '+ colorWinner+' wins!!!!!');
   document.getElementById('buttons').style.visibility='hidden';
    document.getElementById('buttons2').style.visibility='hidden';
-
+  setData();
+  showButtonSave();
   //document.getElementsByTagName('button').style.visibility='hidden';
  
 }
@@ -243,13 +244,49 @@ else{
 function newGame(){
   nuevogrid= grid(rows, columns);
   changeColor();
+  hideButtonSave();
   counter++;
    }
 
+/**
+* @function getBack
+* calls for a correct undo capability
+*
+*/
 
 function getBack(){
   nuevogrid.popOne();
   changeColor();
   counter--;
 
+}
+
+/**
+* @function setData
+* sends game data (historyStack) and (counter) -> this for a correct color restoring mapping
+* to the server
+*
+*/
+
+
+function setData(){
+var date= Date();
+  document.getElementById("gameDate").value = date; 
+  document.getElementById("counterData").value = counter;
+//alert(document.getElementById("counterData").value);
+  document.getElementById("gameData").value = nuevogrid.getHistory();
+
+}
+
+/**
+* @function showButtonSave and hideButtonSave
+* change the style inline of the saveDiv
+*
+*/
+function showButtonSave(){
+  document.getElementById('saveDiv').style.visibility= 'visible';
+}
+
+function hideButtonSave(){
+  document.getElementById('saveDiv').style.visibility= 'hidden';
 }
